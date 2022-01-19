@@ -6,9 +6,10 @@ let cashOut = [];
 let data = {
     transactions: []
 }
-
+// CHECK LOGIN
 checkLogged();
 
+// HEAR FUNCTION
 document.getElementById('button-logout').addEventListener('click', logout);
 document.getElementById('transactionForm').addEventListener('submit', function(e){
     e.preventDefault();
@@ -34,6 +35,7 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
     alert("Lançamento adicionado com sucesso!!")
 });
 
+// LOGIN FUNCTION
 function checkLogged() {
     if(session) {
         sessionStorage.setItem("logged", session);
@@ -52,9 +54,11 @@ function checkLogged() {
     getTransactions();
 
 }
+// SAVING DATA
 function saveData(data) {
     localStorage.setItem(data.login, JSON.stringify(data));
 }
+// GETTING TRANSACTIONS WITH A FUNCTION 
 function getTransactions() {
     const transactions = data.transactions;
     let transactionsHtml = ``;
@@ -80,6 +84,7 @@ function getTransactions() {
 
     document.getElementById('transactions-list').innerHTML = transactionsHtml;
 }
+// LOGOUT USER WITH A FUNCTION
 function logout() {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");

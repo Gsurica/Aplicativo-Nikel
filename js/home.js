@@ -7,8 +7,10 @@ let data = {
     transactions: []
 }
 
+// CHECK LOGIN
 checkLogged();
 
+// HEAR FUNCTION
 document.getElementById('button-logout').addEventListener('click', logout);
 document.getElementById('transactions-button').addEventListener('click', function(e){
     window.location.href = "transacoes.html";
@@ -38,7 +40,7 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
     getTotal();
     alert("Lançamento adicionado com sucesso!!")
 });
-
+// CHECKING THE USER 
 function checkLogged() {
     if(session) {
         sessionStorage.setItem("logged", session);
@@ -58,11 +60,13 @@ function checkLogged() {
     getCashOut();
     getTotal();
 }
+// LOGGING OUT THE USER
 function logout() {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
     window.location.href = "index.html";
 }
+// GETTING THE PLUS CASH ON YOUR WALLET
 function getCashIn() {
     const transactions = data.transactions;
 
@@ -101,6 +105,7 @@ function getCashIn() {
         document.getElementById('cash-in-list').innerHTML = cashInHtml;
     }
 }
+// GETTING THE OUT CASH ON YOUR WALLET
 function getCashOut() {
     const transactions = data.transactions;
 
@@ -139,6 +144,7 @@ function getCashOut() {
         document.getElementById('cash-out-list').innerHTML = cashInHtml;
     }
 }
+// GETTING THE TOTAL CASH ON YOUR WALLET
 function getTotal() {
     const transactions = data.transactions;
     let total = 0;
@@ -153,6 +159,7 @@ function getTotal() {
 
     document.getElementById("total").innerHTML = `R$ ${total.toFixed(2)}`;
 }
+// SAVING THE DATA 
 function saveData(data) {
     localStorage.setItem(data.login, JSON.stringify(data));
 }

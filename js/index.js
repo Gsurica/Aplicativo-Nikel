@@ -1,8 +1,11 @@
 const myModal = new bootstrap.Modal('#registerModal');
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
+
+// CHECK LOGIN
 checkLogged();
-//Logar no sistema 
+
+// HEAR FUNCTIONS
 document.getElementById('login-form').addEventListener('submit', function(e){
     e.preventDefault();
 
@@ -29,7 +32,7 @@ document.getElementById('login-form').addEventListener('submit', function(e){
     
 });
 
-// Função criar conta.
+// CREATING AN ACCOUNT ON YOUR APLICATTION
 document.getElementById('create-form').addEventListener('submit', function(e){
     e.preventDefault();
 
@@ -54,6 +57,7 @@ document.getElementById('create-form').addEventListener('submit', function(e){
     myModal.hide();
     alert("Conta criada com sucesso!");
 });
+// CHECKING THE USER 
 function checkLogged() {
     if(session) {
         sessionStorage.setItem("logged", session);
@@ -64,6 +68,7 @@ function checkLogged() {
         window.location.href = "home.html"
     }
 }
+// SAVING AN ACCOUNT ON YOUR LOCAL DATA BASE
 function saveAccount(data){
     localStorage.setItem(data.login, JSON.stringify(data));
 }
@@ -76,6 +81,7 @@ function getAccount(key) {
 
     return "";
 }
+// SAVING THE USER' SESSION 
 function saveSession(data, saveSession) {
     if(saveSession) {
         localStorage.setItem("session", data);

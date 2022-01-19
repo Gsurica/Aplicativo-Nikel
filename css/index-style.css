@@ -1,3 +1,7 @@
+/*
+    THE CSS STYLE OF YOUR PAGE, MADE FOR SUPLY OUR STYLE' NEEDS.
+
+*/
 #app {
     background: linear-gradient(120deg, #fff 44.9%, #4c79d3 45%) no-repeat fixed;
 }
@@ -50,7 +54,7 @@
     color: #4c79d3;
 }
 .shadow {
-    box-shadow: 8px 8px 12px 1;
+    border-bottom: 1px solid #ccc;
 }
 .color-primary {
     color: #4e0070;
