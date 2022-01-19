@@ -1,0 +1,82 @@
+#app {
+    background: linear-gradient(120deg, #fff 44.9%, #4c79d3 45%) no-repeat fixed;
+}
+#login {
+    background: linear-gradient(120deg, #4c79d3 44.9%, #fff 45%) no-repeat fixed;
+}
+.text-login {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+}
+.coins {
+    position: absolute;
+    bottom: 100px;
+}
+.button-login {
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 25%;
+}
+.button-default {
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+
+}
+.button-cancel {
+    border-radius: 10px;
+}
+.button-float {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 35px;
+    color: #ffffff;
+}
+.button-login:hover, .button-default:hover, .button-float:hover {
+    background-color: #4c79d3;
+    color: #ffffff
+}
+.link-default {
+    color:#4e0070;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.link-default:hover {
+    color: #4c79d3;
+}
+.shadow {
+    box-shadow: 8px 8px 12px 1;
+}
+.color-primary {
+    color: #4e0070;
+}
+.color-secondary {
+    color: #4c79d3;
+}
+.dropdown-item {
+    transition: all 0.3s;
+}
+.dropdown-item:hover {
+    color: #4c79d3;
+}
+.icon-detail {
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.info {
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 0px 0px 0px;
+}
+.log-out {
+    min-width: 5rem;
+}
+.menu {
+    margin-right: 100px;
+}
